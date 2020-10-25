@@ -1,5 +1,4 @@
 require_relative 'config/environment'
-
 class App < Sinatra::Base
 
   # This is a sample static route.
@@ -14,5 +13,10 @@ class App < Sinatra::Base
   end
 
   # Code your final two routes here:
+
+  get "goodbye/:name" do
+    @name = params[:name]
+    "Goodbye, #{@name}."
+  end
 
 end
